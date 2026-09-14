@@ -6,7 +6,6 @@ from .models import DailyNote
 
 class DailyNoteTests(TestCase):
 
-    # Test 1 - Home page loading
     def test_home_page_loads(self):
 
         response = self.client.get(reverse("home"))
@@ -15,7 +14,6 @@ class DailyNoteTests(TestCase):
 
         self.assertTemplateUsed(response, "index.html")
 
-    # Test 2 - Create Note via the model
     def test_create_note_model(self):
 
         note = DailyNote.objects.create(title="Test Note")
@@ -24,7 +22,6 @@ class DailyNoteTests(TestCase):
 
         self.assertEqual(DailyNote.objects.count(), 1)
 
-    # Test 3 - Create a note via the POST form
     def test_create_note_via_post(self):
 
         response = self.client.post(reverse("home"), {"title": "Posted note"})
