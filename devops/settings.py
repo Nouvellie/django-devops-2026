@@ -9,11 +9,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECRET_KEY = "django-insecure-g@@8apm#7%umy#2s^!1$c9!1x@+$9uby1v9ex$brkq$12_d2c7"
 SECRET_KEY = env("SECRET_KEY")
 
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ["django-devops-mqwv.onrender.com"]
 
-#CSRF_TRUSTED_ORIGINS = [""]
+CSRF_TRUSTED_ORIGINS = ["https://django-devops-mqwv.onrender.com"]
 
 INSTALLED_APPS = [
     "django.contrib.admin",
