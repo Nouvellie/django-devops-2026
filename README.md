@@ -22,9 +22,9 @@ python3 manage.py runserver
 docker build -t ghcr.io/<github-username>/django-devops-2026 .
 docker build --no-cache -t ghcr.io/<github-username>/django-devops:latest . 
 
-# Github Container Registry
-docker login ghcr.io --username <github-username> --password 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
-echo "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" | docker login ghcr.io -u <github-username> --password-stdin
+# Github Container Registry (PAT: Personal access token)
+docker login ghcr.io --username <github-username> --password PAT
+echo "PAT" | docker login ghcr.io -u <github-username> --password-stdin
 
 # Push docker image to ghcr
 docker push ghcr.io/<github-username>/django-devops-2026:latest
