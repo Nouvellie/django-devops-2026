@@ -56,28 +56,23 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "devops.wsgi.application"
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+    "default": {
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": env("DB_NAME", default=''),
+        "USER": env("DB_USER", default=''),
+        "PASSWORD": env("DB_PASSWORD", default=''),
+        "HOST": env("DB_HOST", default=''),
+        "PORT": env("DB_PORT", default=''),
     }
 }
-
-'''
-DB_NAME = env("DB_NAME", default=None)
-
-if DB_NAME:
-
-    DATABASES = {
-        "default": {
-            "ENGINE": "django.db.backends.postgresql",
-            "NAME": env("DB_NAME", default=''),
-            "USER": env("DB_USER", default=''),
-            "PASSWORD": env("DB_PASSWORD", default=''),
-            "HOST": env("DB_HOST", default=''),
-            "PORT": env("DB_PORT", default=''),
-        }
-    }
 '''
 
 AUTH_PASSWORD_VALIDATORS = [
