@@ -73,7 +73,6 @@ DATABASES = {
         "PORT": env("DB_PORT", default=''),
     }
 }
-'''
 
 AUTH_PASSWORD_VALIDATORS = [
     {
