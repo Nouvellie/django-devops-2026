@@ -25,6 +25,7 @@ docker build --no-cache -t ghcr.io/<github-username>/django-devops:latest .
 # Github Container Registry (PAT: Personal access token)
 docker login ghcr.io --username <github-username> --password PAT
 echo "PAT" | docker login ghcr.io -u <github-username> --password-stdin
+docker logout ghcr.io
 
 # Push docker image to ghcr
 docker push ghcr.io/<github-username>/django-devops-2026:latest
