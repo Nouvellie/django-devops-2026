@@ -24,7 +24,7 @@ docker build --no-cache -t ghcr.io/<github-username>/django-devops:latest .
 
 # Github Container Registry (PAT: Personal access token)
 docker login ghcr.io --username <github-username> --password PAT
-echo "PAT" | docker login ghcr.io -u <github-username> --password-stdin
+echo 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 | docker login ghcr.io -u nouvellie --password-stdin
 docker logout ghcr.io
 
 # Push docker image to ghcr
@@ -33,3 +33,5 @@ docker push ghcr.io/<github-username>/django-devops-2026:latest
 # Link ghcr img to a specific repo (Dockerfile)
 LABEL org.opencontainers.image.source="https://github.com/<github-username>/<repo>"
 
+# Delete docker img
+docker system prune -a --volumes -f
