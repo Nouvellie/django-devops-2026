@@ -32,3 +32,4 @@ docker push ghcr.io/<github-username>/django-devops-2026:latest
 
 # Link ghcr img to a specific repo (Dockerfile)
 LABEL org.opencontainers.image.source="https://github.com/<github-username>/<repo>"
+

@@ -18,4 +18,4 @@ RUN chmod +x ./entrypoint.sh
 
 ENTRYPOINT ["./entrypoint.sh"]
 
-LABEL org.opencontainers.image.source="https://github.com/nouvellie/django-devops-2026"
+LABEL org.opencontainers.image.source=https://github.com/nouvellie/django-devops-2026
